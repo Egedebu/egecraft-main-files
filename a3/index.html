@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 
 <head>
 	<title>Precision Client (1.5.2-beta_0.2)</title>
 	<meta charset="UTF-8" />
-	<meta content="Precision Client is a custom eaglercraft client with QOL features, custom texture packs, and more." name="description" />
+	<meta content="Precision Client, QOL özellikleri, özel doku paketleri ve daha fazlasını içeren özel bir Eaglercraft istemcisidir." name="description" />
 	<meta content="//precisionclient.vercel.app" name="url" />
 	<meta content="EtcherFX" name="author" />
 	<meta content="Precision Client" property="og:title" />
-	<meta content="en-US" property="og:locale" />
+	<meta content="tr-TR" property="og:locale" />
 	<meta content="website" property="og:type" />
 	<meta content="//precisionclient.vercel.app" property="og:url" />
-	<!--meta content="IMAGE" property="og:image"/>-->
-	<meta content="Precision Client is a custom eaglercraft client with QOL features, custom texture packs, and more."
+	<meta content="Precision Client, QOL özellikleri, özel doku paketleri ve daha fazlasını içeren özel bir Eaglercraft istemcisidir."
 		property="og:description" />
 	<script type="text/javascript" src="eagswebrtc.js"></script>
 	<script type="text/javascript" src="classes.js"></script>
@@ -24,8 +23,7 @@
 	</style>
 </head>
 
-<body style="margin: 0; width: 100vw; height: 100vh; font-family:
-'Product Sans'" id="game_frame" class="gameframe">
+<body style="margin: 0; width: 100vw; height: 100vh; font-family: 'Product Sans';" id="game_frame" class="gameframe">
 	<div id="Selection"
 		style="display: inline-block; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%)">
 		<style>
@@ -55,16 +53,17 @@
 				background-repeat: no-repeat;
 			}
 		</style>
+
 		<h1>Precision Client</h1>
-		<h2>Hosted by MessCraft</h2>
-		<h3>Select a texture pack:</h3>
+		<h2>Egecraft Tarafından Türkçeye Çevrilmiştir</h2>
+		<h3>Bir doku paketi seç:</h3>
 		<select id="Packs" class="dropdown">
-			<option>-- Choose one --</option>
-			<option value="defaultold">Default Old</option>
-			<option value="defaultnew">Default 1.17+</option>
+			<option>-- Birini Seçin --</option>
+			<option value="defaultold">Varsayılan (Eski)</option>
+			<option value="defaultnew">Varsayılan (1.17+)</option>
 			<option value="bombies">Bombies 180k</option>
 			<option value="bones">Bare Bones</option>
-			<option value="modifiednew">Modified 1.17+</option>
+			<option value="modifiednew">Değiştirilmiş 1.17+</option>
 			<option value="miamiprivate">Miami Private</option>
 			<option value="nebula">Nebula</option>
 			<option value="ricefault">Ricefault</option>
@@ -72,15 +71,16 @@
 			<option value="walifault">Walifault</option>
 		</select>
 		<br /><br />
-		<input class="starter" type="button" value="Launch" onclick="Start();" />
+		<input class="starter" type="button" value="Başlat" onclick="Start();" />
 	</div>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 	<script src="/html/apple.js"></script>
-<script>setInterval(apple, 300000);</script>
+	<script>setInterval(apple, 300000);</script>
 
 	<script type="text/javascript">
 		if (document.location.href.startsWith("file:")) {
-			alert("You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation.");
+			alert("Bu dosyayı tarayıcıda doğrudan 'açamazsınız'. Kod bu şekilde çalışmaz. Bu klasörü bir HTTP(s) sunucusuna yükleyip internet üzerinden erişmeniz gerekir. Bu bir hata değildir, lütfen belgeleri okuyun.");
 		} else {
 			var PackSelect = document.getElementById("Packs");
 			function Start() {
@@ -95,16 +95,17 @@
 						serverWorkerURI: "worker_bootstrap.js",
 						worldsFolder: "MAIN",
 						servers: [
-              { serverName: "MessCraft", serverAddress: "wss://eternalcraft.eu.org/s1", hideAddress: true },
-              { serverName: "2", serverAddress: "wss://c.eternalcraft.eu.org/server", hideAddress: true }
-              ],
+							{ serverName: "MessCraft", serverAddress: "wss://eternalcraft.eu.org/s1", hideAddress: true },
+							{ serverName: "2", serverAddress: "wss://c.eternalcraft.eu.org/server", hideAddress: true }
+						],
 						relays: [
 							{ addr: "wss://relay.deev.is/", name: "lax1dude relay #1", primary: relayId == 0 },
 							{ addr: "wss://relay.lax1dude.net/", name: "lax1dude relay #2", primary: relayId == 1 },
 							{ addr: "wss://relay.shhnowisnottheti.me/", name: "ayunami relay #1", primary: relayId == 2 }
 						],
 						mainMenu: {
-							splashes: [], eaglerLogo: false
+							splashes: [],
+							eaglerLogo: false
 						}
 					};
 					(function () {
@@ -117,7 +118,7 @@
 					})();
 					main();
 				} else
-					alert("You need to select a pack");
+					alert("Bir doku paketi seçmelisiniz!");
 			}
 		}
 		if (localStorage.LastPack)
